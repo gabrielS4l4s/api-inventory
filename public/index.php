@@ -25,4 +25,17 @@ $app = require __DIR__.'/../bootstrap/app.php';
 |
 */
 
+// $app->options('/{any:.*}', function () {
+//     return response('', 200)
+//         ->header('Access-Control-Allow-Origin', '*')
+//         ->header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
+//         ->header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
+// });
+// $app->options('{all:.*}', ['middleware' => 'cors.options', function() {
+//     return response('');
+// }]);
+// $app->options('{all:.*}', ['middleware' => 'cors.options', function() {
+//     return response('');
+// }]);
+
 $app->run();

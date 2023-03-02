@@ -15,6 +15,12 @@ class ProductoController extends Controller{
     }
 
     public function store(Request $request){
+        $existProduct = Producto::where('Nombre', $request->Nombre)->first();
+        if($existProduct){
+            return response()->json([
+                'message' => 'El producto ya existe'
+            ], 400);
+        }
         return Producto::create($request->all());
     }
 
